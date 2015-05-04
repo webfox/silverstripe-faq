@@ -8,7 +8,6 @@ class FrequentlyAskedQuestionsExtension extends SiteTreeExtension {
 
 	public function updateCMSFields(FieldList $fields) {
 
-		$fields->addFieldToTab('Root.Main', new DropdownField('Icon', null, Page::$Icons), 'Content');
 		/** @var GridFieldConfig $gridConfig */
 		$gridConfig = GridFieldConfig::create();
 
@@ -28,7 +27,7 @@ class FrequentlyAskedQuestionsExtension extends SiteTreeExtension {
 			'Answer.Summary' => 'Answer Preview',
 		]);
 
-		$GridField = GridField::create('FaqSegments', 'FAQs', $this->Faqs(), $gridConfig);
+		$GridField = GridField::create('FaqSegments', 'FAQs', $this->owner->Faqs(), $gridConfig);
 
 		$fields->addFieldToTab('Root.FaqSegments', $GridField);
 

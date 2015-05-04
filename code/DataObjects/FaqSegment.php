@@ -37,4 +37,20 @@ class FaqSegment extends DataObject {
 
 		return $fields;
 	}
+
+	public function canView($member = null) {
+		return true;
+	}
+
+	public function canEdit($member = null) {
+		return true;
+	}
+
+	public function canDelete($member = null) {
+		return true;
+	}
+
+	public function canCreate($member = null) {
+		return true;
+	}
 }
