@@ -15,7 +15,7 @@ class FrequentlyAskedQuestionsExtension extends SiteTreeExtension {
 			->addComponent(new GridFieldButtonRow('before'))
 			->addComponent(new GridFieldAddNewButton('buttons-before-left'))
 			->addComponent(new GridFieldToolbarHeader())
-			->addComponent(new GridFieldTitleHeader())
+			->addComponent(new  GridFieldSortableHeader())
 			->addComponent(new GridFieldSortableRows('SortOrder'))
 			->addComponent($dataColumns = new GridFieldDataColumns())
 			->addComponent(new GridFieldEditButton())
