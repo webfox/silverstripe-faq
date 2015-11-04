@@ -26,6 +26,16 @@ class FrequentlyAskedQuestionsExtension extends SiteTreeExtension {
 			'Title'          => 'Question',
 			'Answer.Summary' => 'Answer Preview',
 		]);
+		
+		/** @var TabSet $rootTab */
+        	//We need to repush Metadata to ensure it is the last tab
+        	$rootTab = $fields->fieldByName('Root');
+        	$rootTab->push(Tab::create('FaqSegments'));
+        	if ($rootTab->fieldByName('Metadata')) {
+            		$metaChildren = $rootTab->fieldByName('Metadata')->getChildren();
+            		$rootTab->removeByName('Metadata');
+            		$rootTab->push(Tab::create('Metadata')->setChildren($metaChildren));
+        	}
 
 		$GridField = GridField::create('FaqSegments', 'FAQs', $this->owner->Faqs(), $gridConfig);
 
