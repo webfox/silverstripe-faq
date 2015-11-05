@@ -5,10 +5,11 @@ A FAQ module for silverstripe that implements the backend on any pagetype via an
 
 ### Install through composer
 ```bash
-composer require silverstripe-faq
+composer require webfox/silverstripe-faq
 ```
 
-### Apply to any pagetype you want the "Faq Segments" tab to appear on (can be applied to multiple page types)
+### Apply to any pagetype you want the "Faq Segments" tab to appear on
+(can be applied to multiple page types)
 ```yaml
 Page:
   extensions:
