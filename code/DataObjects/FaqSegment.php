@@ -11,7 +11,7 @@ class FaqSegment extends DataObject
     ];
 
     private static $has_one = [
-        'Page' => 'Page'
+        'OwnerObject' => 'DataObject'
     ];
 
     private static $default_sort = 'SortOrder';
