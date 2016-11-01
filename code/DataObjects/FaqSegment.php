@@ -31,7 +31,6 @@ class FaqSegment extends DataObject
             ]);
 
             $fields->removeByName('SortOrder');
-            $fields->removeByName('PageID');
         });
 
         $fields = parent::getCMSFields();
