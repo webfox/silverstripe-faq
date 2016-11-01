@@ -42,7 +42,7 @@ class FrequentlyAskedQuestionsExtension extends SiteTreeExtension
         $GridField = GridField::create('FaqSegments', 'FAQs', $this->owner->Faqs(), $gridConfig);
 
         $fields->addFieldToTab('Root.FaqSegments', $GridField);
-
+        $fields->removeByName('Faqs');
         return $fields;
     }
 }
